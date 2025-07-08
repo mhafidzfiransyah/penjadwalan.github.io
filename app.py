@@ -83,6 +83,7 @@ def check_reminders():
 
 @app.route('/')
 def index():
+    print("🚀 Mengakses route / → Harusnya render index.html")
     return render_template('index.html')
 
 @app.route('/api/schedules', methods=['GET'])
@@ -180,4 +181,4 @@ if __name__ == '__main__':
         scheduler.shutdown()
 
 
-app = Flask(__name__)  # pastikan app variabel ini global
+app = Flask(__name__)
